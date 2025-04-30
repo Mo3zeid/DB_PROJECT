@@ -1,46 +1,55 @@
 # 📚 Library Management System
 
-A comprehensive **Library Management System** designed for academic purposes to manage books, members, staff, borrowing processes, and more. This project was developed as part of a Database Systems course and showcases a fully normalized relational schema with rich entity relationships.
+A comprehensive **Library Management System** developed as a university database course project. It manages library resources, borrowing, memberships, staff, vendors, and book club activities through a relational database model.
 
 ---
 
 ## 🚀 Features
 
 - **Book Management**  
-  Track book metadata (ISBN, title, edition, language, year) and link to authors, publishers, genres, shelves, and vendors.
+  Store and organize book metadata and link to authors, publishers, genres, shelves, and vendors.
 
 - **Membership Management**  
-  Support various membership types, preferred genres, and detailed member profiles.
+  Handle member registrations, preferred genres, and membership types with feedback support.
 
 - **Borrowing & Fines**  
-  Borrowing tracking with due dates, status updates, automated fine calculations, and payment processing.
+  Enable book borrowing/returning, fine calculation, and payment tracking.
 
-- **Branch & Shelf Organization**  
-  Organize branches, rooms, and shelves with capacity and location metadata.
+- **Branch & Shelf Management**  
+  Allocate books across multiple branches, rooms, and shelves with capacity planning.
 
-- **Staff & Roles**  
-  Manage staff data with assigned branches and role-based access control.
+- **Staff & Role Control**  
+  Assign roles and manage staff permissions and branch assignments.
 
 - **Vendor Management**  
-  Track vendor contracts, products supplied, and borrowing-related financial transactions.
+  Maintain vendor profiles, contracts, and supplied resources.
 
-- **Book Clubs**  
-  Manage book clubs, schedules, and member participation.
+- **Book Club Integration**  
+  Create and manage book clubs, member participation, and scheduled activities.
 
 ---
 
 ## 🧾 Database Design
 
-The system includes 24 relational tables with normalized attributes and constraints:
+Includes 24 normalized entities with keys, constraints, and foreign key relationships:
 
-- **Core Entities**: Book, Author, Publisher, Vendor, Genre  
-- **Operations**: Borrowing, Payment, Fines, Feedback  
-- **User Management**: Member, Membership, Staff, Role  
-- **Structure**: Branch, Room_Category, Shelf  
-- **Activities**: BookClub, BookClub_Activities, MemberBookClub  
-- **Join Tables**: BookGenre, BookBranch, BookBorrow
+- **Core Entities**: `Book`, `Author`, `Publisher`, `Genre`, `Vendor`
+- **Users & Access**: `Member`, `Membership`, `Staff`, `Role`
+- **Operations**: `Borrowing`, `Payment`, `Fines`, `Feedback`
+- **Structure**: `Branch`, `Room_Category`, `Shelf`
+- **Clubs**: `BookClub`, `BookClub_Activities`, `MemberBookClub`
+- **Join Tables**: `BookGenre`, `BookBranch`, `BookBorrow`
 
-Each table is designed with appropriate keys, constraints, and foreign key relationships for optimal performance, scalability, and integrity.
+---
+
+## 📎 Project Files
+
+- 📄 `ERD.pdf` – Visual representation of the database schema  
+- 📄 `Schema.pdf` – Mapping from business rules to relational schema  
+- 💾 `FinalSQLTables.sql` – SQL script to create the full database schema  
+- 📄 `Database System Project.docx` – Full project documentation
+
+> ⚠️ Make sure to run the SQL script in a compatible RDBMS such as Microsoft SQL Server or MySQL (with adjustments if needed).
 
 ---
 
@@ -56,6 +65,5 @@ Each table is designed with appropriate keys, constraints, and foreign key relat
 
 ## 📌 Note
 
-This project was created for educational purposes and demonstrates the design and planning of a database-driven library management system, including ER modeling, normalization, and schema design.
-
+This academic project demonstrates database design principles, including ER modeling, normalization, and SQL implementation. It's intended for learning and educational purposes.
 
